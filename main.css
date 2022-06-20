@@ -1,0 +1,337 @@
+/* nav */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+body {
+  transition: background 0.5s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  padding: 15px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 65%;
+  z-index: 1;
+  padding: 4%;
+  background: #fff;
+  transform: translateX(100%);
+  transition: 0.5s linear;
+}
+
+.show-nav {
+  transform: translateX(0);
+}
+
+.close-menu {
+  float: right;
+}
+
+.links {
+  margin-top: 40px;
+}
+
+.links-items {
+  line-height: 50px;
+  position: relative;
+}
+
+.links-items > a {
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+}
+
+.links-items a {
+  color: hsl(0, 0%, 41%);
+  padding: 5px;
+}
+
+.links-items a:hover,
+:visited {
+  color: #111;
+}
+
+.arrow {
+  padding-left: 10px;
+}
+
+.u-arrow {
+  display: none;
+}
+
+.show-dropdown .d-arrow {
+  display: none;
+}
+
+.show-dropdown .u-arrow {
+  display: inline;
+}
+
+.drop-down {
+  margin-left: 10%;
+  display: none;
+  transition: 0.3s ease;
+}
+
+.show-dropdown .drop-down {
+  display: block;
+}
+
+.links-items a > img {
+  padding-right: 10px;
+}
+
+.register-btn {
+  display: none;
+}
+
+/* nav end*/
+
+/* main  */
+.hero-container {
+  display: grid;
+  grid-auto-rows: 500px;
+}
+
+.image-container img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.text-container {
+  padding: 2% 3%;
+  text-align: center;
+}
+
+.heading {
+  margin: 3% 0;
+}
+
+.info-paragraph {
+  padding: 0 2.8%;
+  color: hsl(0, 0%, 41%);
+}
+
+.info {
+  margin: 5% 0;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #111;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.info:hover {
+  color: hsl(0, 0%, 41%);
+  background: #fff;
+}
+
+.brands-logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay.show {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+}
+
+/* main end */
+/* desktop view  */
+@media (min-width: 780px) {
+  /* 414px */
+  /* desktop nav  */
+  h1 {
+    font-size: 4em;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: around;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .navlinks {
+    position: relative;
+    padding: 0;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    transform: translateX(0);
+  }
+
+  .links {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .links-items {
+    line-height: 40px;
+  }
+
+  .links-items > a {
+    font-size: 20px;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .links-items > a {
+    padding: 0 15px;
+  }
+
+  .links-items {
+    position: relative;
+  }
+
+  .links-items > a:nth-child(1) {
+    margin-left: 20px;
+  }
+
+  .arrow {
+    padding-left: 0;
+  }
+
+  .drop-down {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+    margin-left: 0;
+    padding: 10px 25px;
+    background-color: #fff;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .register-btn {
+    display: block;
+    flex: 1;
+    text-align: right;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    background: #fff;
+    color: #777;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    color: #111;
+  }
+
+  .sign-up {
+    border: none;
+  }
+
+  .reg-btn {
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #777;
+  }
+
+  .reg-btn:hover {
+    border-color: #111;
+  }
+
+  .btn:nth-child(2) {
+    margin-left: 15px;
+  }
+
+  /* desktop nav end */
+  /* destop view for main */
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 5%;
+    column-gap: 40px;
+  }
+
+  .image-container {
+    grid-column: 2/3;
+  }
+
+  .text-container {
+    grid-row: 1/2;
+    text-align: left;
+    display: grid;
+    align-items: center;
+  }
+
+  .break-text {
+    display: block;
+  }
+
+  .info-paragraph {
+    padding: 0;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+  }
+
+  .overlay.show {
+    display: none;
+  }
+
+  /* destop view for main end */
+}
